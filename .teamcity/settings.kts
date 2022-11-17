@@ -40,7 +40,10 @@ object Build : BuildType({
 
     steps {
         script {
-            scriptContent = "npm start"
+            scriptContent = """
+                npm install 
+                npm start
+            """.trimIndent()
         }
     }
 
