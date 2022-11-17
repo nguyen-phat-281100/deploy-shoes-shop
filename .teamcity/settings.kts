@@ -1,5 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.nodeJS
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -39,8 +39,8 @@ object Build : BuildType({
     }
 
     steps {
-        nodeJS {
-            shellScript = "npm run test"
+        script {
+            scriptContent = "npm start"
         }
     }
 
